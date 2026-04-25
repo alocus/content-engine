@@ -16,11 +16,15 @@ The key distinction: each platform version **rethinks** the topic — different 
 
 ---
 
-index.md — the entry point. The briefing document your AI agent reads first. Most important file in the entire system
-platforms/ — one file per platform with the rules, format, character limits, posting frequency, content style. Everything the agent needs to write NATIVELY for that platform
-voice/ — your brand voice DNA and how it adapts per platform. This is what stops your content from sounding like a robot generated it
-engine/ — the operational backbone. Hook formulas, the repurposing chain, scheduling rules, content type definitions
-audience/ — who you're actually talking to. Different audience segments get different angles on the same topic
+### Quick Overview
+
+| Directory | Purpose |
+|-----------|---------|
+| `index.md` | Entry point — the briefing document your AI agent reads first. Most important file in the system. |
+| `platforms/` | One file per platform with rules, format, character limits, posting frequency, and content style. Everything the agent needs to write natively for that platform. |
+| `voice/` | Your brand voice DNA and how it adapts per platform. This is what stops your content from sounding AI-generated. |
+| `engine/` | The operational backbone — hook formulas, the repurposing chain, scheduling rules, and content type definitions. |
+| `audience/` | Who you're actually talking to. Different audience segments get different angles on the same topic. |
 
 ---
 
@@ -58,6 +62,7 @@ content-engine/
 **Step 1 — Fill in your identity (required before anything works)**
 
 Open `index.md` and update:
+
 - `Brand:` your name or brand
 - `Niche:` your specific topic area
 
@@ -66,16 +71,19 @@ Open `voice/brand-voice.md` and write your core personality (3-5 sentences). Thi
 **Step 2 — Choose how to run it**
 
 **Option A: Claude Projects (recommended)**
+
 1. Create a new Project in Claude
 2. Upload all 17 `.md` files into the project knowledge base
 3. Give it a topic and Claude reads the full graph automatically
 
 **Option B: Paste context**
+
 1. Copy `index.md` + `voice/brand-voice.md` into any AI chat
 2. Also paste whichever platform files you need
 3. Give a topic and ask it to follow the execution instructions in `index.md`
 
 **Option C: Claude Code / Cursor (most powerful)**
+
 1. Point the agent at this local folder
 2. It reads and follows wikilinks directly from the file system
 3. It can also update `hooks.md` with new winners over time
@@ -85,6 +93,7 @@ Open `voice/brand-voice.md` and write your core personality (3-5 sentences). Thi
 ## Usage
 
 Give the AI a topic and it will:
+
 1. Check niche alignment
 2. Read `brand-voice.md` for core personality
 3. Select the best hook formula from `hooks.md`
