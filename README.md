@@ -16,6 +16,14 @@ The key distinction: each platform version **rethinks** the topic — different 
 
 ---
 
+index.md — the entry point. The briefing document your AI agent reads first. Most important file in the entire system
+platforms/ — one file per platform with the rules, format, character limits, posting frequency, content style. Everything the agent needs to write NATIVELY for that platform
+voice/ — your brand voice DNA and how it adapts per platform. This is what stops your content from sounding like a robot generated it
+engine/ — the operational backbone. Hook formulas, the repurposing chain, scheduling rules, content type definitions
+audience/ — who you're actually talking to. Different audience segments get different angles on the same topic
+
+---
+
 ## Structure
 
 ```
